@@ -18,7 +18,7 @@ A **classic Ping Pong (Pong) game** built with **HTML, CSS, and JavaScript**, fe
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML** – for rendering the game  
 - **CSS** – for styling, animations, gradients, tooltips  
@@ -43,13 +43,19 @@ Ping-Pong/
 
 ## Screenshots
 
-Logo
+### Logo
+
+
 <img width="768" height="768" alt="logo" src="https://github.com/user-attachments/assets/6040f1e0-5fc5-4504-992e-a6b12659408e" />
 
-Gameplay
+### Gameplay
+
+
 <img width="1919" height="867" alt="Screenshot 2025-09-07 042113" src="https://github.com/user-attachments/assets/8bcdd02c-0b7f-40ed-b07e-bc0c7fb0e64e" />
 
-Game reset
+### Game reset
+
+
 <img width="554" height="177" alt="Screenshot 2025-09-07 042140" src="https://github.com/user-attachments/assets/3769e7ef-d7f0-4908-b859-8f7520df24fc" />
 
 ---
