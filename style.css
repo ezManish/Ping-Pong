@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+canvas {
+  background: #0c500364;
+  border: 4.5px solid #ffffff;
+  box-shadow: 0 0 20px #000;
+}
