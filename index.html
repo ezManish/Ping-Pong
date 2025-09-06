@@ -7,9 +7,35 @@
 </head>
 <body>
   <h2>Ping Pong Game</h2>
+
+  <!-- Logo with tooltip -->
+  <div class="logo" id="gameLogo">
+    <img src="assets/logo.png" alt="Ping Pong Logo">
+    <span class="tooltip" id="logoTooltip">Game reset</span>
+  </div>
+
+  <!-- Game container -->
   <div id="game-container">
     <canvas id="pongCanvas" width="800" height="500"></canvas>
   </div>
+
   <script src="game.js"></script>
+  <script>
+    // Tooltip follow cursor
+    const logo = document.getElementById("gameLogo");
+    const tooltip = document.getElementById("logoTooltip");
+
+    logo.addEventListener("mousemove", (e) => {
+      tooltip.style.left = e.pageX + 15 + "px"; // 15px offset from cursor
+      tooltip.style.top = e.pageY - 10 + "px";  // slightly above cursor
+      tooltip.style.visibility = "visible";
+      tooltip.style.opacity = "1";
+    });
+
+    logo.addEventListener("mouseleave", () => {
+      tooltip.style.visibility = "hidden";
+      tooltip.style.opacity = "0";
+    });
+  </script>
 </body>
 </html>

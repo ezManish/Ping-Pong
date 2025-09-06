@@ -1,3 +1,11 @@
+// Load custom font
+const customFont = new FontFace("MyCustomFont", "url(assets/MyFont.ttf)");
+
+customFont.load().then((font) => {
+  document.fonts.add(font);
+  console.log("Custom font loaded!");
+});
+
 const canvas = document.getElementById('pongCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -11,7 +19,7 @@ const PADDLE_HEIGHT = 80;
 const PADDLE_SPEED = 6;
 
 // Ball dimensions
-const BALL_SIZE = 14;
+const BALL_SIZE = 18;
 const BALL_SPEED = 5;
 
 // Game objects
@@ -136,10 +144,10 @@ function draw() {
   ctx.closePath();
 
   // Draw scores
-  ctx.font = '32px Arial';
-  ctx.fillStyle = '#fff';
-  ctx.fillText(leftScore, WIDTH / 4, 50);
-  ctx.fillText(rightScore, WIDTH * 3 / 4, 50);
+ctx.font = "30px MyCustomFont";
+ctx.fillStyle = "#fff";
+ctx.fillText(leftScore, WIDTH / 4, 50);
+ctx.fillText(rightScore, 3 * WIDTH / 4, 50);
 }
 
 
@@ -149,6 +157,30 @@ function resetBall(direction) {
   ball.y = HEIGHT / 2 - BALL_SIZE / 2;
   ball.dx = BALL_SPEED * direction;
   ball.dy = BALL_SPEED * (Math.random() > 0.5 ? 1 : -1);
+}
+// Logo click event - ask for reset
+document.getElementById("gameLogo").addEventListener("click", function () {
+  let confirmReset = confirm("Do you want to reset the game?");
+  if (confirmReset) {
+    resetGame();
+  }
+});
+
+// Reset game function
+function resetGame() {
+  // Reset paddles
+  leftPaddle.y = HEIGHT / 2 - PADDLE_HEIGHT / 2;
+  rightPaddle.y = HEIGHT / 2 - PADDLE_HEIGHT / 2;
+
+  // Reset ball
+  ball.x = WIDTH / 2;
+  ball.y = HEIGHT / 2;
+  ball.vx = BALL_SPEED * (Math.random() > 0.5 ? 1 : -1);
+  ball.vy = BALL_SPEED * (Math.random() > 0.5 ? 1 : -1);
+
+  // Reset scores
+  leftScore = 0;
+  rightScore = 0;
 }
 
 gameLoop();

@@ -1,3 +1,11 @@
+/* Import custom font */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('assets/MyFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: linear-gradient(to right, #141e30, #243b55);
   color: #fff;
@@ -5,6 +13,15 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+/* Apply custom font to heading */
+h2 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #fff;
 }
 
 #game-container {
@@ -18,4 +35,48 @@ canvas {
   background: #0c500364;
   border: 4.5px solid #ffffff;
   box-shadow: 0 0 20px #000;
+}
+
+/* Logo styling */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: inline-block;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Tooltip (dynamic, starts hidden) */
+.tooltip {
+  position: absolute;
+  background: #222;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none; /* let cursor pass through */
+}
+
+/* Tooltip appears when logo hovered */
+.logo:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
