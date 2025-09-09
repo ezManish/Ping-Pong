@@ -1,0 +1,12 @@
+
+{
+  "name": "ping-pong-game",
+  "version": "1.0.0",
+  "description": "A modern Pong-style arcade game built with HTML5 Canvas, CSS, and JavaScript.",
+  "scripts": {
+    "start": "vercel dev",
+    "build": "echo 'No build step required'"
+  },
+  "author": "ez_manish",
+  "license": "MIT"
+}
