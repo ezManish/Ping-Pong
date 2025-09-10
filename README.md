@@ -1,18 +1,14 @@
-<h1 align="center" id="title">Ping-Pong</h1>
-
 <p align="center"><img src="https://socialify.git.ci/ezManish/Ping-Pong/image?custom_language=JavaScript&amp;description=1&amp;font=Raleway&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Brick+Wall&amp;theme=Auto" alt="project-image"></p>
 
 <p id="description">A modern Pong-style arcade game built with HTML5 Canvas and JavaScript featuring smooth gameplay a responsive UI and a polished design. This project reimagines the classic ping-pong game with a clean interface custom fonts and interactive elements.</p>
 
-<p align="center"><img src="https://img.shields.io/badge/Play-Now-brightgreen?logo=google-chrome&amp;logoColor=white&amp;style=for-the-badge" alt="shields"></p>
-
-<h2>Try Ping Pong demo here</h2>
+<h2>Checkout our game's preview here </h2>
 
 [https://ping-pong-nu.vercel.app/](https://ping-pong-nu.vercel.app/)
 
 ---
 
-## Features
+## Features 
 
 - **Classic Gameplay**: Enjoy the traditional ping pong experience with smooth ball and paddle mechanics.  
 - **Custom Font**: The game uses a custom `.ttf` font for a unique style.  
